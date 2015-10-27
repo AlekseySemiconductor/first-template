@@ -1,0 +1,311 @@
+.container, [class*='col-'] {
+	padding: 0px;
+}
+
+.row {
+	margin: 0px;
+}
+
+h1, h2, h3, h4, p, a, button {
+	font-family: Myriad Pro, serif, sans-serif;
+}
+
+
+/*HEADER*/
+
+header {
+	height: 100px;
+	background-color: #262626;
+}
+
+.navbar { /*Убираем отступ снизу и бордер-радиус и навигации*/
+	border-radius: 0px;
+	margin-bottom: 0px;
+}
+
+.navbar-inverse { /*Переопределяем значения по умолчанию*/
+	height: 100%;
+	border: none; /*Убираем границу*/
+	background-color: #262626;
+}
+
+body header .navbar-toggle { /*Добавляем отспупы навигационной кнопке*/
+	margin: 33px 15px 0px 0px;
+}
+
+#navbar {
+	overflow: hidden; /*Скрываем нижний scroll у выпадаюшей навигации*/
+	text-align: center; /*Выравниваем список по центру страницы*/
+	padding: 0px;
+}
+
+header img {
+	padding-top: 34px;
+}
+
+.navbar-brand { /*Убираем отступы у логотипа*/
+	padding: 0px;
+}
+
+.navbar > .container .navbar-brand { /*Убираем отступы у логотипа*/
+	margin: 0px;
+}
+
+.navbar-nav > li > a {
+	padding: 10px; /*Делаем нажатие на ссылку более комфортным*/
+	font-size: 13px;
+	color: #d9d9d9;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, 
+.navbar-inverse .navbar-nav > li > a:visited {
+	color: #ff6760;
+}
+
+/*END HEADER*/
+
+
+/*PORTFOLIO*/
+
+#portfolio {
+	background-color: #2a2a2a;
+	text-align: center;
+	color: #d9d9d9;
+}
+
+#portfolio h1 {
+	font-size: 60px;
+	padding: 60px 0px 30px;
+}
+
+#portfolio h1 span {
+	font-weight: 600;
+}
+
+#portfolio h2 {
+	font-size: 40px;
+	line-height: 50px;
+}
+
+#portfolio h2 span {
+	font-style: italic;
+}
+
+#portfolio button {
+	text-transform: uppercase;
+	height: 50px;
+	padding: 0px 44px 0px;
+	color: #fff;
+	background-color: #ff6760;
+	border: none;
+	border-radius: 4px;
+	margin: 60px auto 30px;
+}
+
+#portfolio button:hover {
+	opacity: .8; /*Добавляем прозрачность при наведении на кнопку*/
+}
+
+#portfolio button:active {
+	background-color: #595959;
+}
+
+/*END PORTFOLIO*/
+
+
+/*ABOUT*/
+
+#about {
+	background-color: #f8f8f8;
+	text-align: center;
+	color: #616161;
+}
+
+#about [class*='col-'] {
+	margin: 90px auto 93px;
+	padding: 0px 3%;
+}
+
+#about div div:first-child > img { /*Выравниваем по горизонтали картинки*/
+	padding-top: 10px;
+}
+
+#about div div:nth-child(2) > img {
+	padding-top: 5px;
+}
+
+#about div div:nth-child(3) > img {
+	padding-top: 8px;
+}
+
+#about h4 {
+	font-size: 18px;
+	font-weight: bold;
+	margin: 28px 0px 15px;
+}
+
+#about p {
+	font-size: 14px;
+	line-height: 24px;
+}
+
+/*END ABOUT*/
+
+
+/*BLOG*/
+
+#blog {
+	background-color: #fff;
+	text-align: center;
+	color: #616161;
+}
+
+#blog h3 {
+	font-size: 30px;
+	padding: 60px 0px 23px;
+	font-weight: bold;
+}
+
+#blog p {
+	font-size: 20px;
+	margin-bottom: 57px;
+}
+
+#blog .buttons {
+	display: inline-block;
+}
+
+#blog button {
+	height: 35px;
+	background-color: #ff6760;
+	text-transform: uppercase;
+	border: none;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	margin: 0px 0px 25px;
+	padding-left: 0px; /*Обнуляем отступы слева и справа по умолчанию*/
+	padding-right: 0px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+#blog #all { /*Устанавливаем свои отступы по бокам*/
+	padding: 0px 19px 0px;
+}
+
+#blog #graphic, #blog #illustration {
+	padding: 0px 20px 0px;
+}
+
+#blog #motion {
+	padding: 0px 17px 0px;
+}
+
+#blog button:hover {
+	opacity: .8;
+}
+
+#blog button:active, 
+#blog button:focus {
+	background-color: #595959;
+}
+
+#blog img {
+	/*Выравниваем отступы между картинками, чтобы были примерено по 10px*/
+	margin: 0px 6px 10px 0px; 
+}
+
+#blog div > img:nth-child(4n) { 
+	/*У каждой четвертой картинке делаем отступ только снизу, 
+	таким образом убирая отступ справа, 
+	потому что эти картинки находятся с самого права*/
+	margin: 0px 0px 10px;
+}
+
+#blog .row > div {
+	/*Задаем нижний отступ 70px, а не 80px, потому что у картинок уже есть нижний отступ 70px*/
+	margin-bottom: 70px;
+}
+
+/*END BLOG*/
+
+
+/*CONTACT*/
+
+#contact {
+	background-color: #313131;
+	text-align: center;
+	color: #bebebe;
+}
+
+#contact h3 {
+	font-size: 30px;
+	padding: 60px 0px 25px;
+	color: #e0e0e0;
+	font-weight: bold;
+}
+
+#contact > p {
+	font-size: 20px;
+}
+
+#contact .address {
+	display: inline-block; /*Чтобы блоки переносились вместе с картинками*/
+	padding: 25px 0px 29px;
+	font-size: 14px;
+}
+
+#contact .phone {
+	display: inline-block;
+	padding: 25px 0px 29px 21px;
+	font-size: 14px;
+}
+
+#contact div p, #contact div img {
+	display: inline-block; /*Чтобы в одну линию встали вместе с картинками*/
+}
+
+#contact div:last-child a {
+	padding-right: 2px; /*Расстояние на макете примерно 7px, но так как уже есть отступы примерно 5px, то остается добавить 2px*/
+}
+
+#contact div:last-child a:last-child {
+	padding: 0px; /*Убираем отступ справа у самой правой картинки*/
+}
+
+#contact > div:last-child {
+	padding-bottom: 60px;
+}
+
+#contact a:hover {
+	opacity: .7;
+}
+
+/*END CONTACT*/
+
+/*FOOTER*/
+
+footer {
+	background-color: #2c2c2c;
+	text-align: center;
+}
+
+footer p {
+	display: inline-block;
+	color: #bebebe;
+	font-size: 14px;
+}
+
+footer p:first-child {
+	vertical-align: top;
+	padding-top: 32.5px; /*Выравниваем @ по строке*/
+}
+
+footer p:last-child {
+	padding: 34px 0px;
+}
+
+/*END FOOTER*/

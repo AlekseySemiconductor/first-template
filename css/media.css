@@ -1,0 +1,153 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	
+	#portfolio div button {
+		margin-top: 40px;
+	}
+
+	#blog div div > img:nth-child(4n) { 
+		/*Переопределяем отсупы у каждой четвертой картинки на странице, 
+		так как уже не эти картинки являются самыми правыми*/
+		margin: 0px 6px 10px 0px;
+	}
+
+	#blog div div > img:nth-child(3n) { 
+		/*Теперь самые правые картинки на странице - это каждая третяя картинка.
+		Переопределяем отступы для каждой третьей картинки.
+		Каждая 12-ая картинка при этом будет иметь отступ, как для 4n картинок, 
+		так как у 4n из-за дополнительного контекстного селектора - div - приоритет выше.
+		Поэтому усилим приоритет, добавив дополнительный div как контектный селектор
+		и поставим 3n ниже в коде, чем 4n, чтобы каждая 12-ая картинка имела имела 
+		отступы как 3n*/
+		margin: 0px 0px 10px;
+	}
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+	#blog div div > img:nth-child(3n) { 
+		/*Добавляем отступы справа каждой третьей картинке/
+		Каждую четвертую картинку можно не трогать, так как
+		она же входит в каждую вторую картинку.*/
+		margin: 0px 6px 10px 0px;
+	}
+
+	#blog div div > img:nth-child(2n) { 
+		/*Теперь боковая картинка это каждая вторая картинка.
+		Обнуляем у них margin справа*/
+		margin: 0px 0px 10px;
+	}
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	
+	header img {
+		padding-left: 15px; /*Делаем отступ слева у логотипа*/
+	}
+
+	#navbar {
+		margin-top: 32px; /*Делаем отступ сверху у выпадающего меню*/
+		background-color: #262626; /*Прописываем цвет фона, чтобы в Firefox не наследовался белый фон от боди при нажатии на одну из ссылок и отводе курсора с ее поля*/
+		position: absolute; /*Чтобы выпадающая навигация не сдвигала нижележаций контент*/
+	}
+
+	.navbar-nav {
+   		margin: 0px; /*Убираем отступ у списка*/
+	}
+	
+	header .navbar-nav > li > a { /*Добавляем header, чтобы усилить приоритет*/
+		line-height: 30px; /*Изменяем line-height, чтобы отступы между строками были видны лучше*/
+		font-size: 30px;
+		padding: 15px 0px 0px 0px; /*Уменьшаем большие отступы у ссылок, которые были при больших размерах экрана*/
+	}
+
+	#portfolio div h2 {
+		font-size: 35px;
+	}
+
+	#portfolio div button {
+		margin-top: 30px;
+	}
+
+	#about div [class*="col-"] {
+		margin: 20px 0px 0px;
+	}
+
+	#about .row {
+		margin-bottom: 20px; /*Делаем отступ здесь, чтобы между блоками отсуп был равен 20px, а не 40px*/
+	}
+
+}
+
+@media only screen and (max-width : 566px) {
+	/*При этом разрешении картинки выстраиваются в ряд по одной*/
+
+	#blog div div > img:nth-child(n) { 
+		/*Убираем отступы справа у всех картинок*/
+		margin: 0px 0px 10px;
+	}
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+	#portfolio div h1 {
+		font-size: 40px;
+		padding: 30px 0px 30px;
+	}
+
+	#portfolio div h2 {
+		font-size: 30px;
+	}
+
+	#about .row > div {
+		width: 100%;
+	}
+
+	body #blog h3 {
+		padding: 30px 0px 15px;
+	}
+
+	body #blog p {
+		margin-bottom: 15px;
+	}
+
+	body #contact h3 {
+		font-size: 40px;
+		padding: 30px 0 25px;
+	}
+
+	#contact div .address, 
+	#contact div .phone {
+		display: block; /*Чтобы блок перенесся на новую строку*/
+		padding: 10px 0px 0px;
+		font-size: 15px;
+	}
+
+	body #contact > div:last-child {
+		padding: 15px 0px;
+	}
+
+	body #blog .buttons {
+		width: 100%;
+	}
+
+}
+
+/*==========  Mobile First Method  ==========*/
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+	.navbar-nav > li {
+		margin: 30px 0px 0px 40px; /*Выравниваем список по центру с учетом padding у ссылок*/
+	}
+
+}
