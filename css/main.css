@@ -101,7 +101,7 @@ header img {
 	background-color: #ff6760;
 	border: none;
 	border-radius: 4px;
-	margin: 60px auto 30px;
+	margin: 60px auto;
 }
 
 #portfolio button:hover {
@@ -309,3 +309,19 @@ footer p:last-child {
 }
 
 /*END FOOTER*/
+
+
+/*BEGIN FANCYBOX*/
+
+	#tip-title { 
+	    text-align: left; 
+	}
+	#tip-title b {
+	    display: block;
+	    margin-right: 80px;
+	}
+	#tip-title span { 
+	    float: right; 
+	}
+
+/*END FABCYBOX*/
